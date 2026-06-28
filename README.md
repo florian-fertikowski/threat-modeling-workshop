@@ -1,4 +1,5 @@
-# Workshop: Sicherheit in Webanwendungen
+# Workshop: Sicherheit in der Webentwicklung - Vom Bedrohungsmodell zum Exploit
+
 
 Praxis-fokussierter Workshop zu Bedrohungsmodellierung und Hands-on Hacking am Beispiel des OWASP Juice Shop. **Dauer:** 120-150 Minuten.
 
