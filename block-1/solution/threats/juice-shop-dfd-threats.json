@@ -136,7 +136,7 @@
                   "status": "Open",
                   "severity": "High",
                   "description": "Das Session-JWT wird im Browser localStorage gespeichert und ist daher von jedem injizierten Skript lesbar. Ein erfolgreicher XSS-Angriff (siehe Frontend) extrahiert das Token, womit der Angreifer das Opfer ohne weitere Zugangsdaten imitieren kann.",
-                  "mitigation": "Session-Tokens in HttpOnly+Secure+SameSite Cookies speichern, Tokens kurz halten, Token-Rotation nach Login. CSP gegen XSS-Injection als Defense-in-Depth.",
+                  "mitigation": "",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 1
@@ -155,7 +155,11 @@
                 }
               ],
               "hasOpenThreats": true,
-              "providesAuthentication": false
+              "providesAuthentication": false,
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -406,7 +410,7 @@
                   "type": "Information disclosure",
                   "status": "Open",
                   "severity": "High",
-                  "description": "Die SPA liefert alle Route-Definitionen und einige Konstanten an den Browser aus. Versteckte Funktionalität (z.B. Score-Board, Administration) und Endpoint-Strukturen sind durch Auslesen des gebundelten JavaScript und der Source-Maps entdeckbar.",
+                  "description": "Die SPA liefert alle Route-Definitionen und einige Konstanten an den Browser aus. Versteckte Funktionalität und Endpoint-Strukturen sind durch Auslesen des gebundelten JavaScript und der Source-Maps entdeckbar.",
                   "mitigation": "Niemals auf client-side Obscurity für Autorisierung verlassen. Source-Maps in Produktion entfernen. Alle Zugriffskontrollen serverseitig durchsetzen.",
                   "modelType": "STRIDE",
                   "new": false,
@@ -414,7 +418,15 @@
                 }
               ],
               "hasOpenThreats": true,
-              "isWebApplication": true
+              "isWebApplication": true,
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -531,18 +543,6 @@
               "reasonOutOfScope": "",
               "threats": [
                 {
-                  "id": "bb71d6ab-fbf2-4bcf-9185-f9595f409834",
-                  "title": "JWT-Manipulation / schwache Token-Signatur",
-                  "type": "Spoofing",
-                  "status": "Open",
-                  "severity": "High",
-                  "description": "Session-Tokens sind JWTs. Akzeptanz des 'none'-Algorithmus, ein schwaches/bekanntes Signing-Secret oder ein geleakter RSA-Private-Key erlauben einem Angreifer, Tokens für beliebige Nutzer zu fälschen — inklusive Anhebung der Role-Claim auf admin.",
-                  "mitigation": "Algorithmus serverseitig pinnen, niemals aus dem Token-Header übernehmen. 'none' explizit verbieten. Standard-Claims (exp, iss, aud) validieren.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 6
-                },
-                {
                   "id": "4053d259-ded6-42ce-bcdc-3d31603e56ad",
                   "title": "SQL Injection",
                   "type": "Tampering",
@@ -654,7 +654,7 @@
               "hasOpenThreats": true,
               "isWebApplication": true,
               "threatFrequency": {
-                "spoofing": 0,
+                "spoofing": -1,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 2,

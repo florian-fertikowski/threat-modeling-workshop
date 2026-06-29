@@ -2,13 +2,13 @@
 
 **Zeit:** ca. 10 Minuten
 
-**Alternativ:** Verifiziert eure eigenen Auth-Hypothesen aus Block 1 frei.
+**Alternativ:** Verifiziert eure eigenen Hypothesen aus Block 1 frei.
 
 **Hinweis zu den Lösungen:** Wieder klappbare Hinweise und Lösungen. Probiert es erst selbst.
 
 ---
 
-## Pflicht 1: Password Strength
+## Password Strength
 
 Logge dich als Administrator ein **ohne SQL Injection** — also mit dem echten Passwort.
 

@@ -14,7 +14,7 @@ Praxis-fokussierter Workshop zu Bedrohungsmodellierung und Hands-on Hacking am B
 
 - Grundkenntnisse Web-Entwicklung (HTTP, Client/Server, Datenbanken auf Basisniveau)
 - Keine vorherige Security-Erfahrung nötig
-- Vor dem Workshop installiert: **OWASP Threat Dragon** und **OWASP Juice Shop** (siehe `setup.md`)
+- Optional: Vor dem Workshop installiert: **OWASP Threat Dragon** und **OWASP Juice Shop**
 
 ## Wie nutze ich dieses Repo?
 

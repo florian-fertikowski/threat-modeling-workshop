@@ -2,7 +2,7 @@
 
 **Zeit:** ca. 20 Minuten
 
-**Alternativ:** Verifiziert eure eigenen BAC-Hypothesen aus Block 1 frei.
+**Alternativ:** Verifiziert eure eigenen Hypothesen aus Block 1 frei.
 
 **Hinweis zu den Lösungen:** Jede Challenge hat ein bis zwei einklappbare Hinweis-Blöcke und einen Lösungs-Block. Probiert es erst selbst — wer direkt die Lösung aufklappt, lernt am wenigsten.
 
